@@ -2,52 +2,52 @@
 	import { onMount } from 'svelte';
 
     // Data for sections
-    const navLinks = ["Solutions", "Partner stories", "Integrations", "Events", "Pricing"];
+    const navLinks = ["Platform", "Courses", "For Teams", "Resources", "Pricing"];
     
     const logos = [
-        { name: "Strava", width: 100 },
-        { name: "piab", width: 60 },
-        { name: "Huel", width: 80 },
-        { name: "swile", width: 70 },
-        { name: "Polestar", width: 110 },
-        { name: "Electrolux Group", width: 120 },
-        { name: "Brex", width: 80 }
+        { name: "Stripe", width: 100 },
+        { name: "Shopify", width: 100 },
+        { name: "Notion", width: 90 },
+        { name: "Figma", width: 80 },
+        { name: "Atlassian", width: 110 },
+        { name: "Salesforce", width: 120 },
+        { name: "HubSpot", width: 90 }
     ];
 
     const features = [
         {
-            tag: "AI LEARNING EXPERIENCE",
-            title: "A personal tutor at every learner's fingertips",
+            tag: "AI-POWERED PRACTICE",
+            title: "Real-world scenarios that build actual skills",
             image: "phone",
             color: "bg-gray-100"
         },
         {
-            tag: "VIRTUAL CLASSROOM",
-            title: "Blended learning streamlined in one platform",
+            tag: "EXPERT-LED COURSES",
+            title: "Learn from industry leaders who've done it",
             image: "video",
             color: "bg-gray-100"
         },
         {
-            tag: "JUST-IN-TIME LEARNING",
-            title: "Instant search and answers to any question",
+            tag: "AUTOMATED COHORTS",
+            title: "Peer learning without the manual coordination",
             image: "search",
             color: "bg-gray-100"
         },
         {
-            tag: "COLLABORATIVE AUTHORING",
-            title: "Beautiful interactive content created at lightning speed",
+            tag: "PERFORMANCE TRACKING",
+            title: "Measure real skill gains, not just completion",
             image: "editor",
             color: "bg-gray-100"
         },
         {
-            tag: "LEARNING MANAGEMENT",
-            title: "All your manual learning admin on autopilot",
+            tag: "ADAPTIVE LEARNING",
+            title: "AI adjusts difficulty to each learner's level",
             image: "admin",
             color: "bg-gray-100"
         },
         {
-            tag: "LEARNING ANALYTICS",
-            title: "Shareable dashboards and insights in seconds",
+            tag: "OUTCOMES ANALYTICS",
+            title: "Prove ROI with performance metrics that matter",
             image: "analytics",
             color: "bg-gray-100"
         }
@@ -55,106 +55,105 @@
 
     const testimonials = [
         {
-            quote: "Sana Learn has helped us go from manual, one-size-fits-all onboarding to a fully automated, yet still tailored experience.",
-            name: "Olivia Winkvist",
-            role: "Talent manager at Foodora",
-            avatar: "OW"
+            quote: "Uplimit transformed our AI upskilling from a checkbox exercise to measurable performance gains. Our engineers are actually applying what they learn.",
+            name: "Sarah Chen",
+            role: "VP of Engineering at TechCorp",
+            avatar: "SC"
         },
         {
-            quote: "The first system I've seen that can truly be an end-to-end learning platform for companies.",
-            name: "Josh Bersin",
-            role: "The Josh Bersin Company",
-            avatar: "JB"
+            quote: "Finally, a learning platform that focuses on practice and outcomes instead of just content consumption. Our completion rates went from 20% to 85%.",
+            name: "Michael Rodriguez",
+            role: "Head of L&D at DataFlow",
+            avatar: "MR"
         },
          {
-            quote: "After my first demo, I couldn't believe Sana had all the tools I needed to efficiently design and evaluate the learning experience, not to mention a beautiful UI and engaging design.",
-            name: "Ali Friedrich",
-            role: "Director of Learning Experience at Superside",
-            avatar: "AF"
-        },
-        // Adding more to fill the grid as per screenshot
-        {
-            quote: "Sana Learn was the end-to-end learning platform we had been waiting for. It isn't just a tool for L&D or People Partners. It's a tool for everyone.",
-            name: "Amber de Wolde",
-            role: "Senior People Partner at Veriff",
-            avatar: "AW"
+            quote: "The automated cohort management saved our team hundreds of hours. We can now run continuous learning programs without the operational overhead.",
+            name: "Jennifer Park",
+            role: "Director of People Operations at CloudScale",
+            avatar: "JP"
         },
         {
-            quote: "This isn't just another learning platform. Sana is something unique and powerful, in equal measure.",
-            name: "Luke O'Mahoney",
-            role: "People Experience Advisor",
-            avatar: "LO"
+            quote: "Uplimit's AI-powered practice scenarios are incredibly realistic. Our sales team improved their pitch conversion by 40% after completing the program.",
+            name: "David Thompson",
+            role: "VP of Sales Enablement at GrowthLabs",
+            avatar: "DT"
         },
         {
-            quote: "Sana is not an LMS with Gen AI added. It's AI at its core.",
-            name: "Josh Bersin",
-            role: "The Josh Bersin Company",
-            avatar: "JB"
+            quote: "We've tried other platforms, but Uplimit is the only one that delivers measurable skill development. The performance analytics are game-changing.",
+            name: "Lisa Martinez",
+            role: "Chief Learning Officer at InnovateCo",
+            avatar: "LM"
+        },
+        {
+            quote: "The expert-led courses combined with AI practice create the perfect learning experience. Our team is more engaged than ever.",
+            name: "James Wilson",
+            role: "Head of Talent Development at FutureTech",
+            avatar: "JW"
         }
     ];
 
     const partnershipServices = [
-        "Dedicated deployment lead",
-        "Complete implementation support",
-        "Tailored onboarding",
-        "Priority support",
-        "Content migration services",
-        "L&D strategy and consulting",
-        "Community, events, and resources"
+        "Dedicated success manager",
+        "Custom course development",
+        "Cohort design and scheduling",
+        "Integration with your HRIS",
+        "Performance analytics setup",
+        "Train-the-trainer programs",
+        "Ongoing content updates and support"
     ];
 
     const comparisons = [
         {
-            tag: "LEARNING MANAGEMENT",
-            left: "Manage learning through static course catalogs and scheduled sessions through manual admin",
-            right: "AI handles enrollments, scheduling, and updates automatically based on pre-configured rules"
+            tag: "ENGAGEMENT",
+            left: "Low completion rates (10-20%) with passive video watching and reading",
+            right: "High completion rates (80%+) through active practice and peer accountability"
         },
         {
-            tag: "SKILLS MANAGEMENT",
-            left: "Build a taxonomy, market voluntary courses, and manage skills",
-            right: "AI monitors and designs learning experiences based on real-time, individual performance"
+            tag: "SKILL DEVELOPMENT",
+            left: "Measure course completions and quiz scores, not actual performance",
+            right: "Track real skill gains through AI-assessed practice scenarios and performance metrics"
         },
         {
-            tag: "CONTENT CREATION",
-            left: "Design, create, and launch courses or programs based on scoped business partner requirements",
-            right: "AI generates content dynamically from source material in a formal suited to the learner's preferences"
+            tag: "COHORT MANAGEMENT",
+            left: "Manual scheduling, reminders, and coordination eating up L&D team time",
+            right: "Automated cohort operations handle scheduling, matching, and progress tracking"
         },
         {
-            tag: "JUST-IN-TIME LEARNING",
-            left: "Purchase and build out a separate wiki for users to find company-specific information",
-            right: "AI answers questions in natural language directly from the learning platform and cites sources"
+            tag: "CONTENT DELIVERY",
+            left: "One-size-fits-all courses that don't adapt to individual needs",
+            right: "AI-powered adaptive learning adjusts difficulty and focus based on performance"
         },
         {
-            tag: "LEARNING ANALYTICS",
-            left: "Export data from LMS, upload it to a BI tool for analysis, share results with stakeholders",
-            right: "AI generates dashboards and answers performance questions in real time, instantly accessible to stakeholders"
+            tag: "ROI MEASUREMENT",
+            left: "Struggle to prove impact with vanity metrics like hours spent learning",
+            right: "Demonstrate clear ROI with measurable performance improvements and skill assessments"
         }
     ];
 
     const faqs = [
-        "What can I use Sana Learn for?",
-        "Can I brand the platform for a unique experience?",
-        "Is the authoring built-in?",
-        "What types of content can we create and include?",
-        "Can I integrate Sana with my HRIS and CRM?",
-        "Can I automate enrollments?",
-        "Can we migrate existing content from other LMS platforms?",
-        "What is Sana Learn's pricing?",
-        "How secure will my company's knowledge and data be with Sana?"
+        "What types of skills can teams learn on Uplimit?",
+        "How does AI-powered practice work?",
+        "What makes Uplimit different from traditional LMS platforms?",
+        "How do you measure learning outcomes?",
+        "Can we create custom courses for our team?",
+        "How does automated cohort management work?",
+        "What integrations does Uplimit support?",
+        "What is Uplimit's pricing model?",
+        "How do you ensure data security and privacy?"
     ];
 
 </script>
 
-<div class="font-sans text-gray-900 bg-white selection:bg-sana-lime selection:text-black">
+<div class="font-sans text-gray-900 bg-white selection:bg-primary-200 selection:text-black">
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-[1400px] mx-auto px-6 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <!-- Logo Mark -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
-                    <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="currentColor"/>
+                <svg width="24" height="24" viewBox="0 0 66 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M44.0354 13.173H0.658203V0H65.4257V64.7675H52.2527V23.5853L11.9021 63.9358L2.58738 54.6211L44.0354 13.173Z" fill="currentColor"/>
                 </svg>
-                <span class="font-medium text-lg tracking-tight">Sana Learn</span>
+                <span class="font-medium text-lg tracking-tight">Uplimit</span>
             </div>
 
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
@@ -163,8 +162,8 @@
                 {/each}
             </div>
 
-            <button class="bg-sana-blue text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-600 transition-colors">
-                Book an intro
+            <button class="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
+                Get started
             </button>
         </div>
     </nav>
@@ -173,13 +172,13 @@
     <section class="pt-20 pb-16 px-6 text-center overflow-hidden">
         <div class="max-w-4xl mx-auto mb-12">
             <h1 class="font-serif text-6xl md:text-7xl lg:text-[5rem] leading-[1.1] mb-6 font-normal tracking-tight">
-                The future of <br/> enterprise learning
+                Workforce learning <br/> that drives performance
             </h1>
             <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-                Sana Learn brings the best of an LMS, LXP, authoring tool, and virtual classroom into one AI-native learning platform.
+                AI-powered practice, expert-led courses, and automated cohorts that deliver measurable skill development—not just completions.
             </p>
-            <button class="bg-sana-lime text-black px-8 py-3 rounded-full text-base font-medium hover:bg-[#c2e600] transition-colors">
-                Book an intro
+            <button class="bg-black text-white px-8 py-3 rounded-full text-base font-medium hover:bg-gray-800 transition-colors">
+                Get started
             </button>
         </div>
 
@@ -239,8 +238,8 @@
                         <div class="bg-white w-full h-full rounded-[1.5rem] overflow-hidden p-2 flex flex-col">
                              <div class="h-4 w-20 bg-gray-100 rounded mx-auto mb-4 mt-2"></div>
                              <div class="flex-1 bg-gray-50 rounded-xl p-2">
-                                <div class="h-16 bg-sana-lime/20 rounded-lg mb-2"></div>
-                                <div class="h-16 bg-blue-50 rounded-lg mb-2"></div>
+                                <div class="h-16 bg-primary-50 rounded-lg mb-2"></div>
+                                <div class="h-16 bg-gray-100 rounded-lg mb-2"></div>
                              </div>
                         </div>
                     </div>
@@ -267,7 +266,7 @@
     <!-- Logos Section -->
     <section class="py-16 border-b border-gray-100">
         <div class="max-w-[1400px] mx-auto px-6 text-center">
-            <p class="text-sm text-gray-500 mb-10">Trusted by market leaders and innovators alike</p>
+            <p class="text-sm text-gray-500 mb-10">Trusted by high-growth teams worldwide</p>
             <div class="flex flex-wrap justify-center items-center gap-12 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
                 {#each logos as logo}
                     <div class="h-8 flex items-center justify-center">
@@ -279,13 +278,13 @@
         </div>
     </section>
 
-    <!-- Meet Sana Learn Grid -->
+    <!-- Meet Uplimit Grid -->
     <section class="py-24 px-6 bg-gray-50">
         <div class="max-w-[1400px] mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="font-serif text-5xl md:text-6xl mb-6">Meet Sana Learn</h2>
+                <h2 class="font-serif text-5xl md:text-6xl mb-6">How Uplimit works</h2>
                 <p class="text-lg text-gray-600 leading-relaxed">
-                    Say goodbye to fragmented learning tools. Sana Learn is the only platform designed to move you beyond one-size-fits-all content to a truly dynamic, personalized learning experience at scale.
+                    Move beyond passive content consumption. Uplimit combines AI-powered practice, expert instruction, and peer learning to deliver the completion rates and performance outcomes L&D teams need.
                 </p>
             </div>
 
@@ -293,7 +292,7 @@
                 {#each features as feature}
                     <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-[500px]">
                         <div class="p-8 pb-0 flex-1">
-                            <span class="inline-block bg-sana-lime text-[10px] font-bold tracking-wider px-2 py-1 rounded mb-4 uppercase">
+                            <span class="inline-block bg-primary-100 text-primary-700 text-[10px] font-bold tracking-wider px-2 py-1 rounded mb-4 uppercase">
                                 {feature.tag}
                             </span>
                             <h3 class="font-serif text-2xl leading-tight mb-4">
@@ -327,7 +326,7 @@
                             {:else if feature.image === 'search'}
                                  <div class="absolute bottom-[-40px] right-[-20px] w-full h-full bg-white shadow-lg rounded-tl-2xl p-6 border border-gray-100">
                                      <div class="flex items-center gap-3 mb-4 border-b pb-4">
-                                         <div class="w-8 h-8 bg-sana-lime rounded-full"></div>
+                                         <div class="w-8 h-8 bg-primary-200 rounded-full"></div>
                                          <div class="h-2 w-32 bg-gray-200 rounded"></div>
                                      </div>
                                      <div class="space-y-3">
@@ -352,19 +351,10 @@
     <section class="py-24 px-6 bg-white">
         <div class="max-w-[1400px] mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="font-serif text-5xl md:text-6xl mb-6">Loved by users, creators, <br/> and admins alike</h2>
+                <h2 class="font-serif text-5xl md:text-6xl mb-6">Loved by L&D teams <br/> and learners alike</h2>
                 <p class="text-lg text-gray-600 leading-relaxed mb-10">
-                    The modern learning experience everyone deserves. <br/> You don't have to choose between user-friendly and enterprise-ready.
+                    High engagement meets measurable outcomes. <br/> Finally, a learning platform that delivers on both.
                 </p>
-                <div class="flex justify-center gap-4">
-                    <!-- G2 Badges Mockup -->
-                    {#each Array(5) as _, i}
-                        <div class="w-16 h-20 bg-gradient-to-br from-red-50 to-orange-50 border border-red-100 rounded flex flex-col items-center justify-center p-1 text-[8px] text-center text-red-800 font-bold shadow-sm">
-                            <div class="w-6 h-6 bg-red-500 rounded-full mb-1 text-white flex items-center justify-center">G2</div>
-                            Leader
-                        </div>
-                    {/each}
-                </div>
             </div>
 
             <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
@@ -390,20 +380,20 @@
     <section class="py-24 px-6 bg-white border-t border-gray-100">
         <div class="max-w-[1400px] mx-auto">
              <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="font-serif text-5xl md:text-6xl mb-6">The proof is in <br/> the partnership</h2>
+                <h2 class="font-serif text-5xl md:text-6xl mb-6">Built for enterprise <br/> scale and success</h2>
                 <p class="text-lg text-gray-600 leading-relaxed">
-                    It isn't all about the technology. Organizations choose Sana <br/> because we're product-led and partnership-driven.
+                    From onboarding to ongoing support, we're with you every step <br/> of the way to ensure your learning programs succeed.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="bg-gray-50 p-12 rounded-3xl h-full">
-                    <h3 class="font-serif text-2xl mb-8">Enterprise partnership services</h3>
+                    <h3 class="font-serif text-2xl mb-8">Enterprise support included</h3>
                     <ul class="space-y-4">
                         {#each partnershipServices as service}
                             <li class="flex items-center gap-3">
-                                <div class="w-5 h-5 rounded-full bg-sana-lime flex items-center justify-center shrink-0">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <div class="w-5 h-5 rounded-full bg-black flex items-center justify-center shrink-0">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 </div>
                                 <span class="text-gray-700">{service}</span>
                             </li>
@@ -424,7 +414,7 @@
     <section class="py-24 px-6 bg-white">
         <div class="max-w-[1400px] mx-auto">
             <div class="flex justify-between items-end mb-12">
-                <p class="text-lg text-gray-600 max-w-xl">Sana Learn is a fit for any industry. Read the results yourself.</p>
+                <p class="text-lg text-gray-600 max-w-xl">Real teams, real results. See how Uplimit drives performance.</p>
                 <div class="flex gap-2">
                     <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50">
                         ←
@@ -445,10 +435,10 @@
                     </div>
                     <div class="absolute inset-0 p-8 flex flex-col justify-between text-white">
                         <div>
-                            <h3 class="font-serif text-3xl leading-tight mb-4">Polestar increases active users by 275%</h3>
-                            <div class="text-xs text-gray-300 uppercase tracking-wider">Employees: 3000 <br/> Industry: Automotive</div>
+                            <h3 class="font-serif text-3xl leading-tight mb-4">TechCorp achieves 85% completion rate on AI upskilling</h3>
+                            <div class="text-xs text-gray-300 uppercase tracking-wider">Employees: 2500 <br/> Industry: Technology</div>
                         </div>
-                        <div class="font-bold text-xl">Polestar</div>
+                        <div class="font-bold text-xl">TechCorp</div>
                     </div>
                 </div>
 
@@ -460,10 +450,10 @@
                     </div>
                     <div class="absolute inset-0 p-8 flex flex-col justify-between text-white">
                         <div>
-                            <h3 class="font-serif text-3xl leading-tight mb-4">Superside cuts design time by 80% and leads an AI revolution</h3>
-                            <div class="text-xs text-gray-300 uppercase tracking-wider">Employees: 750 <br/> Industry: Design and Marketing</div>
+                            <h3 class="font-serif text-3xl leading-tight mb-4">GrowthLabs improves sales performance by 40%</h3>
+                            <div class="text-xs text-gray-300 uppercase tracking-wider">Employees: 850 <br/> Industry: SaaS</div>
                         </div>
-                        <div class="font-bold text-xl">Superside</div>
+                        <div class="font-bold text-xl">GrowthLabs</div>
                     </div>
                 </div>
 
@@ -475,10 +465,10 @@
                     </div>
                     <div class="absolute inset-0 p-8 flex flex-col justify-between text-white">
                         <div>
-                            <h3 class="font-serif text-3xl leading-tight mb-4">Ahlsell accelerates course creation...</h3>
-                            <div class="text-xs text-gray-300 uppercase tracking-wider">Employees: 7500 <br/> Industry: Wholesale</div>
+                            <h3 class="font-serif text-3xl leading-tight mb-4">InnovateCo reduces onboarding time by 60%</h3>
+                            <div class="text-xs text-gray-300 uppercase tracking-wider">Employees: 5000 <br/> Industry: Financial Services</div>
                         </div>
-                        <div class="font-bold text-xl">ahlsell</div>
+                        <div class="font-bold text-xl">InnovateCo</div>
                     </div>
                 </div>
             </div>
@@ -489,17 +479,17 @@
     <section class="py-24 px-6 bg-white">
         <div class="max-w-[1400px] mx-auto">
              <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="font-serif text-5xl md:text-6xl mb-6">AI is not an add-on. <br/> It's what we do.</h2>
+                <h2 class="font-serif text-5xl md:text-6xl mb-6">From low engagement <br/> to high performance</h2>
                 <p class="text-lg text-gray-600 leading-relaxed">
-                    AI-first L&D can transform your team from a content delivery <br/> machine to a strategic value-driver.
+                    Traditional learning platforms focus on content delivery. <br/> Uplimit focuses on measurable outcomes.
                 </p>
             </div>
 
             <div class="border-t border-gray-100">
                 <div class="grid grid-cols-3 py-4 text-xs text-gray-400 uppercase tracking-wider border-b border-gray-100">
-                    <div>Status quo</div>
+                    <div>Traditional platforms</div>
                     <div class="text-center">→</div>
-                    <div>Sana Learn</div>
+                    <div>Uplimit</div>
                 </div>
                 {#each comparisons as item}
                     <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 py-12 border-b border-gray-100 items-center group hover:bg-gray-50 transition-colors px-4 -mx-4 rounded-xl">
@@ -507,7 +497,7 @@
                             {item.left}
                         </div>
                         <div class="flex justify-center">
-                            <span class="bg-sana-lime text-[10px] font-bold tracking-wider px-2 py-1 rounded uppercase whitespace-nowrap">
+                            <span class="bg-primary-100 text-primary-700 text-[10px] font-bold tracking-wider px-2 py-1 rounded uppercase whitespace-nowrap">
                                 {item.tag}
                             </span>
                         </div>
@@ -524,9 +514,9 @@
     <section class="py-24 px-6 bg-white">
         <div class="max-w-[1400px] mx-auto">
              <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="font-serif text-5xl md:text-6xl mb-6">Enterprise-grade <br/> integrations and security</h2>
+                <h2 class="font-serif text-5xl md:text-6xl mb-6">Enterprise-ready <br/> from day one</h2>
                 <p class="text-lg text-gray-600 leading-relaxed">
-                    We take this stuff as seriously as you do.
+                    Seamless integrations and enterprise-grade security built in.
                 </p>
             </div>
 
@@ -534,12 +524,12 @@
                 <!-- Integrations -->
                 <div>
                     <div class="text-center mb-8">
-                        <span class="bg-sana-lime text-[10px] font-bold tracking-wider px-2 py-1 rounded uppercase">
-                            PLAYS NICE WITH YOUR FAVORITE TOOLS
+                        <span class="bg-primary-100 text-primary-700 text-[10px] font-bold tracking-wider px-2 py-1 rounded uppercase">
+                            INTEGRATES WITH YOUR STACK
                         </span>
                     </div>
                     <div class="grid grid-cols-4 gap-6">
-                        {#each ['Google Drive', 'Teams', 'Slack', 'Salesforce', 'Coursera', 'Edcast', 'Degreed', 'HiBob', 'Workday', 'Personio', 'SAP Litmos', 'Okta'] as tool}
+                        {#each ['Slack', 'Teams', 'Zoom', 'Workday', 'BambooHR', 'Greenhouse', 'Lever', 'Salesforce', 'HubSpot', 'Google Workspace', 'Okta', 'Azure AD'] as tool}
                             <div class="aspect-square bg-gray-50 rounded-xl flex flex-col items-center justify-center p-4 hover:bg-gray-100 transition-colors">
                                 <div class="w-8 h-8 bg-gray-200 rounded-full mb-2"></div> <!-- Icon Placeholder -->
                                 <span class="text-[10px] text-center text-gray-600 font-medium">{tool}</span>
@@ -551,12 +541,12 @@
                 <!-- Security -->
                 <div>
                     <div class="text-center mb-8">
-                        <span class="bg-sana-lime text-[10px] font-bold tracking-wider px-2 py-1 rounded uppercase">
-                            SECURITY YOU CAN STAND BY
+                        <span class="bg-primary-100 text-primary-700 text-[10px] font-bold tracking-wider px-2 py-1 rounded uppercase">
+                            ENTERPRISE SECURITY
                         </span>
                     </div>
                     <div class="grid grid-cols-4 gap-6">
-                         {#each ['Custom user roles', 'User provisioning', 'Advanced permissions', 'Flexible groups', 'SOC 2 Type 2', 'GDPR compliant', 'ISO 27001', 'SCORM compliant', 'SAML single sign-on', '2FA with email codes', 'Regional deploys', 'Audit logging'] as item}
+                         {#each ['SOC 2 Type 2', 'GDPR compliant', 'SSO/SAML', 'Role-based access', 'Data encryption', 'Audit logs', 'Privacy controls', 'Compliance ready', 'Secure APIs', 'Regular audits', 'Data residency', 'Backup & recovery'] as item}
                             <div class="aspect-square bg-gray-50 rounded-xl flex flex-col items-center justify-center p-2 hover:bg-gray-100 transition-colors">
                                 <div class="w-6 h-6 border-2 border-gray-300 rounded mb-2"></div> <!-- Icon Placeholder -->
                                 <span class="text-[10px] text-center text-gray-600 font-medium leading-tight">{item}</span>
@@ -573,17 +563,17 @@
         <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
             <div class="bg-white relative flex items-center justify-center p-12 overflow-hidden">
                 <div class="flex gap-4 transform -rotate-6 scale-90">
-                    <div class="w-64 h-80 bg-[#00D166] flex items-center justify-center text-white font-bold text-4xl shadow-2xl">FAST COMPANY</div>
-                    <div class="w-64 h-80 bg-black flex items-center justify-center text-white font-bold text-4xl shadow-2xl z-10 -mt-12">Forbes</div>
-                    <div class="w-64 h-80 bg-[#4CA6FF] flex items-center justify-center text-white font-bold text-4xl shadow-2xl">FAST COMPANY</div>
+                    <div class="w-64 h-80 bg-primary-600 flex items-center justify-center text-white font-bold text-4xl shadow-2xl">AI LEARNING</div>
+                    <div class="w-64 h-80 bg-black flex items-center justify-center text-white font-bold text-4xl shadow-2xl z-10 -mt-12">PRACTICE</div>
+                    <div class="w-64 h-80 bg-primary-400 flex items-center justify-center text-white font-bold text-4xl shadow-2xl">OUTCOMES</div>
                 </div>
             </div>
-            <div class="bg-sana-lime p-12 lg:p-24 flex flex-col justify-center">
+            <div class="bg-primary-50 p-12 lg:p-24 flex flex-col justify-center">
                 <p class="font-serif text-3xl md:text-4xl leading-tight mb-8">
-                    Sana has been on a mission to transform how organizations learn and access knowledge with AI since 2016.
+                    Uplimit was founded by learning, product, and AI experts who saw firsthand how traditional platforms fail to deliver real skill development.
                 </p>
                 <p class="font-serif text-3xl md:text-4xl leading-tight">
-                    We have pioneered the application of AI to learning experiences, content creation, learning management, and learning analytics. We believe the best is yet to come.
+                    We built Uplimit to solve the completion crisis and prove that learning programs can drive measurable performance gains when designed around practice, not passive consumption.
                 </p>
             </div>
         </div>
@@ -592,10 +582,10 @@
     <!-- Bottom CTA -->
     <section class="py-32 px-6 text-center bg-white">
         <div class="max-w-4xl mx-auto">
-            <h2 class="font-serif text-6xl md:text-7xl mb-6">The future of <br/> learning is here.</h2>
-            <p class="text-xl text-gray-600 mb-10">Will you join us?</p>
-            <button class="bg-sana-lime text-black px-8 py-3 rounded-full text-base font-medium hover:bg-[#c2e600] transition-colors">
-                Book an intro
+            <h2 class="font-serif text-6xl md:text-7xl mb-6">Ready to transform <br/> your learning programs?</h2>
+            <p class="text-xl text-gray-600 mb-10">See how Uplimit can drive real performance outcomes for your team.</p>
+            <button class="bg-black text-white px-8 py-3 rounded-full text-base font-medium hover:bg-gray-800 transition-colors">
+                Get started
             </button>
         </div>
     </section>
@@ -622,63 +612,55 @@
         <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div class="col-span-1 md:col-span-1">
                 <div class="flex items-center gap-2 mb-8">
-                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
-                        <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="currentColor"/>
+                     <svg width="24" height="24" viewBox="0 0 66 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M44.0354 13.173H0.658203V0H65.4257V64.7675H52.2527V23.5853L11.9021 63.9358L2.58738 54.6211L44.0354 13.173Z" fill="currentColor"/>
                     </svg>
-                    <span class="font-medium text-xl tracking-tight">Sana</span>
+                    <span class="font-medium text-xl tracking-tight">Uplimit</span>
                 </div>
-                <div class="text-sm text-gray-500 mb-4">Subscribe to our newsletter</div>
+                <div class="text-sm text-gray-500 mb-4">Stay updated on learning innovation</div>
                 <div class="flex gap-2 border-b border-gray-200 pb-2 mb-8">
                     <input type="email" placeholder="Email address" class="w-full outline-none text-sm" />
                     <button class="text-gray-400 hover:text-black">→</button>
                 </div>
-                <div class="text-xs text-gray-400">© Sana Labs AB 2025</div>
+                <div class="text-xs text-gray-400">© Uplimit 2025</div>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-8 col-span-1 md:col-span-3">
                 <div>
-                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-6">Sana Agents</h4>
+                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-6">Platform</h4>
                     <ul class="space-y-3 text-sm text-gray-600">
                         <li><a href="#" class="hover:text-black">Overview</a></li>
-                        <li><a href="#" class="hover:text-black">AI agents</a></li>
-                        <li><a href="#" class="hover:text-black">Enterprise search</a></li>
-                        <li><a href="#" class="hover:text-black">iOS app</a></li>
-                        <li><a href="#" class="hover:text-black">Solutions</a></li>
+                        <li><a href="#" class="hover:text-black">AI-Powered Practice</a></li>
+                        <li><a href="#" class="hover:text-black">Expert-Led Courses</a></li>
+                        <li><a href="#" class="hover:text-black">Cohort Management</a></li>
+                        <li><a href="#" class="hover:text-black">Analytics</a></li>
                         <li><a href="#" class="hover:text-black">Integrations</a></li>
-                        <li><a href="#" class="hover:text-black">Events</a></li>
                         <li><a href="#" class="hover:text-black">Security</a></li>
-                        <li><a href="#" class="hover:text-black">Stories</a></li>
                         <li><a href="#" class="hover:text-black">Pricing</a></li>
-                        <li><a href="#" class="hover:text-black">Help Center</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-6">Sana Learn</h4>
+                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-6">Resources</h4>
                     <ul class="space-y-3 text-sm text-gray-600">
-                        <li><a href="#" class="hover:text-black">Overview</a></li>
-                        <li><a href="#" class="hover:text-black">Learning management</a></li>
-                        <li><a href="#" class="hover:text-black">Content creation</a></li>
-                        <li><a href="#" class="hover:text-black">AI tutor</a></li>
-                        <li><a href="#" class="hover:text-black">Solutions</a></li>
-                        <li><a href="#" class="hover:text-black">Partner stories</a></li>
-                        <li><a href="#" class="hover:text-black">Integrations</a></li>
-                        <li><a href="#" class="hover:text-black">Events</a></li>
-                        <li><a href="#" class="hover:text-black">Pricing</a></li>
+                        <li><a href="#" class="hover:text-black">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-black">Blog</a></li>
+                        <li><a href="#" class="hover:text-black">Learning Hub</a></li>
+                        <li><a href="#" class="hover:text-black">Documentation</a></li>
                         <li><a href="#" class="hover:text-black">Help Center</a></li>
-                        <li><a href="#" class="hover:text-black">Changelog</a></li>
+                        <li><a href="#" class="hover:text-black">API Reference</a></li>
+                        <li><a href="#" class="hover:text-black">Webinars</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-6">Company</h4>
                     <ul class="space-y-3 text-sm text-gray-600">
-                        <li><a href="#" class="hover:text-black">Hexad Releases</a></li>
-                        <li><a href="#" class="hover:text-black">Swedish AI Reform</a></li>
-                        <li><a href="#" class="hover:text-black">Strange Loop Podcast</a></li>
-                        <li><a href="#" class="hover:text-black">Mission</a></li>
+                        <li><a href="#" class="hover:text-black">About</a></li>
                         <li><a href="#" class="hover:text-black">Careers</a></li>
+                        <li><a href="#" class="hover:text-black">Team</a></li>
                         <li><a href="#" class="hover:text-black">Press</a></li>
-                        <li><a href="#" class="hover:text-black">Legal</a></li>
-                        <li><a href="#" class="hover:text-black">Cookie settings</a></li>
+                        <li><a href="#" class="hover:text-black">Contact</a></li>
+                        <li><a href="#" class="hover:text-black">Privacy</a></li>
+                        <li><a href="#" class="hover:text-black">Terms</a></li>
                     </ul>
                 </div>
             </div>
